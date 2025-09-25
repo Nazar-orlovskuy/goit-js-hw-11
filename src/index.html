@@ -8,15 +8,37 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+      <section class="search-section">
+        <form class="form" id="search-form">
+          <label>
+            <input
+              type="text"
+              name="search-text"
+              placeholder="Search images..."
+              required
+            />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+      </section>
 
-    <load src="./partials/footer.html" />
+      <section class="gallery-section">
+        <ul class="gallery"></ul>
+      </section>
+
+      <!-- loader -->
+      <div id="loader" class="loader is-hidden" aria-hidden="true">
+        <!-- loaders.css markup: line-scale -->
+        <div class="line-scale">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </main>
 
     <script type="module" src="./main.js"></script>
   </body>
